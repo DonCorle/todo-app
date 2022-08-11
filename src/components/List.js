@@ -16,6 +16,7 @@ const List = ({
     let newTodoData = todoData.filter((data) => data.id !== id);
     setTodoData(newTodoData);
     localStorage.setItem("todoData", JSON.stringify(newTodoData));
+    console.log(JSON.stringify(newTodoData));
   };
 
   const handleCompleteChange = (id) => {
@@ -82,7 +83,7 @@ const List = ({
         ref={provided.innerRef}
         {...provided.dragHandleProps}
         className={`${
-          snapshot.isDragging ? "bg-gray-400" : "bg-gray-100"
+          snapshot.isDragging ? "bg-gray-500" : "bg-gray-100"
         } flex items-center justify-between w-full px-4 py-1 my-2 text-gray-600 bg-gray-100 border rounded`}
       >
         <div className="items-center">
